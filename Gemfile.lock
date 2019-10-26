@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/codahale/bcrypt-ruby.git
+  revision: 4279fa01f083b48de9a18c54423453059074ba77
+  specs:
+    bcrypt (3.1.13)
+
+GIT
   remote: https://github.com/larskanis/sqlite3-ruby
   revision: 1027509079176fcc4088dcc7638101cde617cf16
   branch: add-gemspec
@@ -245,6 +251,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt!
   bootstrap-sass (>= 3.4.1)
   byebug (= 9.0.6)
   coffee-rails (= 4.2.2)
