@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '5.1.6'
-gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 gem "simple_form", "5.0.0"
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] #  source 'https://rubygems.org'
-gem 'bcrypt', '>= 3.1.13'
 gem 'puma', '3.9.1'
 gem "bootstrap-sass", ">= 3.4.1"
 gem 'paperclip', '6.1.0'
@@ -17,13 +14,13 @@ gem 'jbuilder', '2.7.0'
 gem 'rails-angular-material'
 gem 'owlcarousel-rails'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-gem 'rb-readline', '~> 0.5.5'
 
 group :development, :test do
 gem 'byebug', '9.0.6', platform: :mri
 end
 
 group :development do
+gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
 gem 'web-console', '3.5.1'
 gem 'listen', '3.1.5'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false

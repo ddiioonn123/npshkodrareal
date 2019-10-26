@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20190424141110) do
     t.integer "category_id"
     t.string "product_img_file_name"
     t.string "product_img_content_type"
-    t.integer "product_img_file_size"
+    t.bigint "product_img_file_size"
     t.datetime "product_img_updated_at"
     t.text "pershkrimi"
   end
