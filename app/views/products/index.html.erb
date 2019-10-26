@@ -1,0 +1,88 @@
+<html>
+<head>
+<style> 
+.uls {
+  list-style-type: none;
+    padding: 0;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  margin-top: 4%;
+  margin-left: 15%;
+  margin-right: 15%;
+  border: 2px solid black;
+  border-radius: 25px;
+  font-color: black;
+	  
+  
+}
+
+.lis {
+  float: left;
+  font-size: 20px;
+}
+.lis a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.lis a:hover:not(.active) {
+  background-color: #8C9EBD;
+  border: 1px solid black;
+  border-radius: 25px;
+
+}
+
+.lis a.active {
+  color: white;
+  background-color: #8C9EBD;
+  border: 1px solid black;
+  border-radius: 25px;
+
+}
+</style>
+</head>
+
+<body>
+<ul class="uls">
+<% Category.all.each do |category| %>
+    <li class="lis <%= 'active' if params[:category] == category.name %>">
+        <%= link_to category.name, products_path(category: category.name) %>
+        
+    </li>
+<% end %>
+</ul>
+
+
+</div>
+
+<% if @products.count == 0 %>
+
+	<h1 style="font-color:  #8080ff; margin-left: 17%; margin-top: 6%; margin-right: 18%;">Na falni, asnje produkt nuk u gjet ne kete kategori</h1>
+
+<% end %>
+<div style="margin-top: 5%; margin-left: 18%; margin-right: 12%;">
+
+
+<% @products.each do |product | %>
+<ul style="text-decoration: none; display: inline">
+    <div style="display: inline-block" id="stimtc">
+    <a href="/products/<%= product.id %>">
+    <li style="display: inline-block"><%= image_tag product.product_img.url(:product_index), class: 'fotoja' %> </li>
+    <li class="tc tit" style="color: black; margin-right: 50px"> <%= product.title %></li>
+    </a>
+</div>
+</ul>
+
+
+<% end %>
+
+</div>
+</div>
+
+
+
+</body>
+</html>

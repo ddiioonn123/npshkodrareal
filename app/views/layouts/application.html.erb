@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <title>N.P. Shkodra</title>
+    <script src="https://kit.fontawesome.com/c4c81ac5b7.js"></script>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="top-bar md-padding dialogdemoBasicUsage" id="popupContainer">
+        <div class="container">
+            <!-- Row Start -->
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+
+                    <ul class="left topbar-blocks">
+                        <li><a href="mailto:info@yourdomain.com"><i class="em em-email sads" aria-hidden="true"></i><span style="font-family: Karla, sans-serif; font-color: white; font-size: 11.5px;"> info@shkodragroup.com </span></a></li>
+                        <li><a href="tel:+0801 2345 6789"><i class="em em-phone sads" aria-hidden="true"></i><span style="font-family: Karla, sans-serif; font-color: white; font-size: 11.5px">  +383 49 844 225
+
+                        </span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="topbar-blocks">
+                        
+                    <% if logged_in? %>
+                    <li style="font-size: 11.5px"> <%= current_user.name %> </li>
+                    <li style="font-size: 11.5px"> <%= link_to "Log out", logout_path, method: "delete" %></li>
+                    <% else %>
+                    <li style="font-size: 15px; font-color: white;"><a href="/login"> Login </a></li>
+                    <% end %>
+                    </ul>
+                </div>
+            </div>
+            <!-- Row End -->
+        </div>
+    </div>
+
+<div class="navs">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <div class="menuve" style="color: black;">
+            <a href="/home">Ballina</a>
+            <a href="/products">Produktet</a>
+            <a href="/kontakti">Kontakti</a>
+        </div>
+    </div>
+    <%= yield %>
+
+</body>
+
+
+
+<footer class="footers">
+<ul style="margin-left: 25%; margin-bottom: 1%; font-family: 'Karla', sans-serif">
+<li style="font-size: 22px; margin-top: 4%; color: white; margin-left: 1.2%; text-decoration: underline; display: inline-block; margin-right: 10%;">Linqet</li>
+<li style="font-size: 16px; margin-bottom: 2.5%; margin-top: 4%; color: white; margin-left: 7%; text-decoration: underline; display: inline-block;">RRJETET SOCIALE
+
+
+</ul>
+
+<ul style="margin-left: 25%; margin-bottom: 1%; font-family: 'Karla', sans-serif">
+<li style="font-size: 17px; color: white; margin-bottom: 1.4% margin-right: 7%; margin-left: 0.2%;"><a href="/products" style="margin-right: 5%:"><i class="fas fa-link"></i> Ballina</a>
+<a href="/products" style="margin-left: 19%;"><i class="fas fa-link"></i> Facebook</a> </li>
+</li>
+</ul>
+<ul style="margin-left: 25%; margin-bottom: 1%; font-family: 'Karla', sans-serif">
+
+<li style="font-size: 17px; color: white; margin-bottom: 1.4%; margin-left: 0.2%;"><a href="/kontakti"><i class="fas fa-link"></i> Kontakti</a>
+<a href="/products" style="margin-left: 18%;"><i class="fas fa-link"></i> Instagram</a> </li>
+
+</ul>
+<ul style="margin-left: 25%; margin-bottom: 1%; font-family: 'Karla', sans-serif">
+<li style="font-size: 17px; color: white; margin-right: 7%; margin-left: 0.2%;"><a href="/products" style="margin-right: 5%:"><i class="fas fa-link"></i>Produktet</a></li>
+</ul>
+
+
+</footer>
+
+
+
+
+
+    </html>
