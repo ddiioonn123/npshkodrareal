@@ -1,4 +1,6 @@
 
+                    <% if logged_in? %>
+
 <div class="col-md-6 col-md-offset-3" style="color: black;">
 
 <%= form_for(@category) do |f| %>
@@ -7,9 +9,10 @@
 <%= f.text_field :name, class: 'form-control' %>
 
 <%= f.submit "Krijo kategorine", class: "btn btn-primary" %>
-<% end %>
-<% if !logged_in? %> 
 
- <% redirect_to home_path %> 
- <% end %>
+<% redirect_to '/products/' %> 
+<% else %>
+<% redirect_to home_path %> 
+<% end %>
+<% end %>
 </div>
