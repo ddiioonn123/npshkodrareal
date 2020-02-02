@@ -11,6 +11,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks', '5.0.1'
+gem 'aws-sdk'
 
 gem 'jbuilder', '2.7.0'
 gem 'rails-angular-material'
