@@ -13,15 +13,7 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.paperclip_defaults = {
-    storage: :s3,
-    s3_credentials: {
-      bucket: ENV.fetch('npshkodrabucket1'),
-      access_key_id: ENV.fetch('AKIARGKNHH7PVLN4PMXN'),
-      secret_access_key: ENV.fetch('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'),
-      s3_region: ENV.fetch('eu-central-1'),
-    }
-  }
+ 
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
   # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
   # `config/secrets.yml.key`.
