@@ -70,7 +70,7 @@
 <ul style="text-decoration: none; display: inline">
     <div style="display: inline-block" id="stimtc">
     <a href="/products/<%= product.id %>">
-    <li style="display: inline-block"><%= image_tag product.product_img.url(:product_index), class: 'fotoja' %> </li>
+    <li style="display: inline-block"><img class="fotoja" src="<%= product.product_img %>"></li>
     <li class="tc tit" style="color: black; margin-right: 50px"> <%= product.title %></li>
     </a>
 </div>
