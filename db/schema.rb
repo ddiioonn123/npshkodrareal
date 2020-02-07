@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 20200207210440) do
     t.integer "category_id"
     t.text "pershkrimi"
     t.text "product_img"
+    t.string "product_img_file_name"
+    t.string "product_img_content_type"
+    t.bigint "product_img_file_size"
+    t.datetime "product_img_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
