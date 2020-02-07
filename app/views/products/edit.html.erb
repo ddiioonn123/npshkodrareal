@@ -6,7 +6,8 @@
  <% if logged_in? %>
  
       <%= simple_form_for @product, :html => {:multipart => true} do |f| %>
-    <%= f.file_field :product_img %>
+        <h4>Linku i fotos<h4>
+        <%= f.input :product_img, label: "Linku" %>
     <div style="color: blue;">
     <%= f.select :category_id, @categories %>
     </div>
