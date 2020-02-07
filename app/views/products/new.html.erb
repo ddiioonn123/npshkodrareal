@@ -7,7 +7,8 @@
    <%   end %>
 <h1>Shto Produkt:</h1>
    <%= simple_form_for @product, :html => {:multipart => true} do |f| %>
-<%= f.file_field :product_img %>
+      <h4>Linku i fotos<h4>
+      <%= f.input :product_img, label: "Linku" %>
  <div class="cate">  
    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Zgjidhni kategorine:") %>
   </div> 
