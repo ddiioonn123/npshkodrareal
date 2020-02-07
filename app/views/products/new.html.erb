@@ -1,0 +1,29 @@
+<div class="col-md-6 col-md-offset-3">
+<div class="deniso">
+
+
+<% if !logged_in? %>
+       <% redirect_to root_path %>
+   <%   end %>
+<h1>Shto Produkt:</h1>
+   <%= simple_form_for @product, :html => {:multipart => true} do |f| %>
+      <h4>Linku i fotos<h4>
+      <%= f.input :product_img, label: "Linku" %>
+ <div class="cate">  
+   <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Zgjidhni kategorine:") %>
+  </div> 
+  <h4>Emri i produktit</h4>
+   <%= f.input :title, label: "Emri i Produktit:" %>
+   <h4>Kodi</h4>
+   <%= f.input :kodi, label: "Kodi:" %>
+   <h4>Qmimi<h4>
+   <%= f.input :qmimi, label: "Qmimi:" %>
+   <h4>Pershkrimi</h4>
+   <%= f.input :pershkrimi, label: "Dimensionet:" %>
+   <div class="btn btn-1">
+   <%= f.button :submit %>
+   </div>
+   <% end %>
+</div>
+
+<%= link_to "Kthehuni mbrapa", root_path, class: "btn-custom2" %>
