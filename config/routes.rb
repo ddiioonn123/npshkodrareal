@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 resources :users
 resources :products
 resources :categories
-get '/categories/new', to: 'categories#new'
   get '/home', to: 'faqetstatike#home'
 get '/modelet', to: 'products#index'
 get '/signup', to: 'users#new'
