@@ -52,12 +52,10 @@ th, td {
 <body>
 
 <div class="parent">
-  <div class="child">
-      <p style=""><img src="<%= @product.product_img %>", class="fotojashow"></p>
-</div>
-<div class="child">
-<p> <b>Emri i produktit:</b> <%= @product.title %></p>
-</div>
+<ul>
+      <li style="display: inline"><img src="<%= @product.product_img %>", class="fotojashow"></li>
+      <li style="display: inline"> <b>Emri i produktit:</b> <%= @product.title %></li>
+  </ul>
 </div>
 <!-- 
 <li style="display: inline-block; margin-left: 5%; margin-bottom: 9%;">   <table>
